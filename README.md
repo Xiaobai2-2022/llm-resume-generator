@@ -70,3 +70,47 @@
     4. **Build and run** select **Java 21** and `dev.fxtech.llm_resume_generator.LlmResumeGeneratorApplication`
 
 12. You can now run the project!
+
+## Contribute
+
+### Prerequisite
+
+1. GPG
+
+### Commit
+
+1. Set up the GPG key for signed commit
+
+    1. `gpg --full-generate-key`
+    2. select `(1) RSA and RSA`
+    3. select `4096`
+    4. select `0 = key does not expire`, `Y`
+    5. enter your real name and your GitHub email, `O`
+    6. select a passphrase
+
+2. Export your GPG key
+
+   `gpg --armor --export <your-github-email>`
+
+3. Copy the entire GPG key from `-----BEGIN PGP PUBLIC KEY BLOCK-----`
+
+4. Go to **GitHub** $\rightarrow$ **Settings** $\rightarrow$ **SSH and GPG keys**$\rightarrow$ **New GPG key** and enter your copied block as Key
+
+5. List all GPG keys
+
+   `gpg --list-secret-keys --keyid-format=long `
+
+   You should see `sec   rsa4096/ABCDEF1234567890 2025-10-14 [SC]`
+
+6. Use the part after the `/`(`ABCDEF1234567890`)
+
+   `git config --global user.signingkey ABCDEF1234567890`
+   `git config --global commit.gpgsign true`
+
+7. Now add all files
+
+   `git add <files>`
+
+8. Commit with your signature
+
+   `git commit -S -m "<commit-message>"`
