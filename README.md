@@ -1,9 +1,5 @@
 # Large Language Model Resume Generator
 
-## Server Prerequisite
-
-1.
-
 ## Server Installation
 
 ### Prerequisite
