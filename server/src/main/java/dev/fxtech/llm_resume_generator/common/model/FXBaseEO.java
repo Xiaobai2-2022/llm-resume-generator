@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Schema(description = "FX Base Entity Object")
-public class FXBaseEO {
+public abstract class FXBaseEO {
 
     @Schema(description = "Primary Key ID")
     @TableId(value = "id", type = IdType.ASSIGN_UUID)
