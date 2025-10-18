@@ -11,6 +11,12 @@ public enum FXErrno {
     USERNAME_MISSING(4040002, "Requested User Name is Missing", HttpStatus.NOT_FOUND),
     TOKEN_MISSING(4040002, "Requested Token is Missing", HttpStatus.NOT_FOUND),
 
+
+    SERVER_ERROR(5000000, "Internal Server Error", HttpStatus.INTERNAL_SERVER_ERROR),
+    KEY_VERSION_NOT_FOUND(5000001, "Key Version does not Exist", HttpStatus.INTERNAL_SERVER_ERROR),
+    ENCRYPT_ERROR(5000002, "Encrypt Error", HttpStatus.INTERNAL_SERVER_ERROR),
+    DECRYPT_ERROR(5000003, "Decrypt Error", HttpStatus.INTERNAL_SERVER_ERROR);
+
     ;
 
     private final int errno;
