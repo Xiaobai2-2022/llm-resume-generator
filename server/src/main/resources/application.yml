@@ -17,6 +17,8 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-handlers-package: dev.fxtech.llm_resume_generator.common.handler
+
 
 server:
   port: 5076
